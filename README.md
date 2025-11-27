@@ -1,2 +1,0 @@
-# DGME169_Geiziane-E
-DGME169_FALL2K25
