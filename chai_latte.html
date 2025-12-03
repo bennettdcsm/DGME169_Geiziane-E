@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Golden Chai Latte | Chá-de Coffee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">CHá</span>
+      </a>
+
+      <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+		<a href="gallery.html" class="nav-link active">Menu</a>
+        <a href="index.html#locations" class="nav-link">Locations</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary">Order Online</a>
+      </div>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container about-hero-grid">
+		   <div class="about-hero-image">
+          <img src="images/chai_latte.jpeg" alt="Golden Chai Latte in ceramic cup">
+        </div>
+        <div class="about-hero-text">
+          <p class="eyebrow">Signature Drink</p>
+          <h1>Golden Chai Latte</h1>
+          <p>
+            A cozy blend of black tea, warm spices, steamed milk, and a drizzle of honey. Finished with a sprinkle of cinnamon for a soft, golden glow in your cup.
+          </p>
+
+          <h2 style="font-size:1rem; margin-top:1rem;">Details</h2>
+          <ul>
+            <li>Available hot</li>
+            <li>Milk options: whole, oat, almond</li>
+            <li>Flavor notes: cinnamon, cardamom, clove, honey</li>
+          </ul>
+
+          <p style="margin-top:1rem; font-weight:500;">Ready to be ordered.</p>
+
+          <div style="margin-top:0.75rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="gallery.html" class="btn btn-outline">Back to Menu</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2025 Chá-de | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      if (!menuToggle || !mainNav) return;
+      menuToggle.addEventListener('click', function () {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+  </script>
+</body>
+</html>
+
