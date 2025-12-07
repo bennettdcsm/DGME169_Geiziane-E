@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Chá-de Coffee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">CHá</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Menu</a>
+        <a href="index.html#locations" class="nav-link">Locations</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="gallery.html" class="btn btn-primary">Order Online</a>
+      </div>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <p class="section-eyebrow">Contact</p>
+        <h1 class="section-title">Let’s Talk Over Coffee</h1>
+        <p class="section-intro">
+          Have a question, catering request, or just want to say hi? Send us a message and we’ll get back to you as soon as we can.
+        </p>
+      </div>
+    </section>
+	  
+    <section class="contact-section">
+      <div class="container contact-grid">
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" action="#" method="post">
+        
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </div>
+			  
+            <fieldset class="form-field">
+              <legend>What are you contacting us about?</legend>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="reason[]" value="catering">
+                  <span>Catering / large order</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="reason[]" value="event">
+                  <span>Hosting an event at the café</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="reason[]" value="feedback">
+                  <span>Feedback or suggestion</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="reason[]" value="other">
+                  <span>Something else</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us a little about what you need..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+		  
+		  <div class="contact-info">
+          <h2>Visit Chá-de</h2>
+          <p>
+            668 California Ave, San Francisco <br>
+            CA 69164
+          </p>
+
+          <h3>Open Hours</h3>
+          <ul class="hours-list">
+            <li>Monday – Friday: 8:00am – 7:30pm</li>
+            <li>Saturday: 9:00am – 3:00pm</li>
+            <li>Sunday: 9:00am – 12:30pm</li>
+          </ul>
+
+          <h3>Contact</h3>
+          <p>
+            Email: <a href="#">hello@chade.cafe</a><br>
+            Phone: (555) 555-5555
+          </p>
+        </div>
+		  
+		  
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Menu</a>
+        <a href="index.html#locations">Locations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">
+        © 2025 Chá-de | All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      if (!menuToggle || !mainNav) return;
+
+      menuToggle.addEventListener('click', function () {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+  </script>
+</body>
+</html>
